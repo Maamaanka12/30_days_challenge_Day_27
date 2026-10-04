@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Somali Jobs — Find work that fits</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css"/></head>
+<body>
+<header class="site"><div class="wrap navrow">
+<a class="brand" href="index.html"><span class="brand-mark">S</span>Somali Jobs</a>
+<nav class="links"><a class="on" href="index.html">Home</a><a href="jobs.html">Find jobs</a><a href="companies.html">Companies</a></nav>
+<div class="navbtns"><button class="savedbtn" id="openSaved">Saved<b id="savedCount">0</b></button><a class="btn primary" href="jobs.html">Find jobs</a><button class="savedbtn burger" id="burger">Menu</button></div>
+</div><div class="wrap" id="mobileNav" style="display:none;padding-bottom:12px"><nav class="links" style="display:flex;flex-wrap:wrap"><a class="on" href="index.html">Home</a><a href="jobs.html">Find jobs</a><a href="companies.html">Companies</a></nav></div></header>
+
+<main class="wrap">
+<div class="hero hero-split">
+<div>
+<h1>Find work that fits your life.</h1>
+<p class="sub">Full-time roles, part-time shifts, and internships — with pay shown upfront.</p></div>
+<figure class="hero-photo">
+<img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1200&q=80" onerror="this.onerror=null;this.src='images/hero-team.jpg'" alt="Young team collaborating in a bright office" loading="eager"/>
+<figcaption>Teams hiring this week</figcaption>
+</figure>
+</div>
+<div class="hero" style="padding-top:0">
+<form id="searchForm" data-goto="jobs">
+<input id="q" type="search" placeholder="Search by role or skill" autocomplete="off" aria-label="Keyword"/>
+<select id="loc" aria-label="Location"><option value="">All locations</option><option>Remote</option><option>Mogadishu</option><option>Hargeisa</option><option>Nairobi</option><option>Hybrid</option></select>
+<select id="typ" aria-label="Type"><option value="">All types</option><option>Full-time</option><option>Part-time</option><option>Internship</option><option>Contract</option></select>
+<button class="btn primary" type="submit">Search</button>
+</form>
+<p class="meta-line">1,284 open roles · 312 companies · 96 posted this week</p>
+</div>
+</main>
+
+<div class="band"><main class="wrap"><section class="block">
+<div class="sec-head"><h2>Why Somali Jobs</h2><p class="sub">The essentials, nothing more.</p></div>
+<div class="feature-list">
+<div><h3>Pay upfront</h3><p>Every listing shows its monthly pay before you click.</p></div>
+<div><h3>Apply in a minute</h3><p>Name and email is all it takes. Replies usually within 3 days.</p></div>
+<div><h3>Save for later</h3><p>Keep a shortlist in your browser. No account needed.</p></div>
+</div>
+<div class="sec-head" style="margin-top:28px"><h2>Browse by path</h2><p class="sub">Pick a starting point — each opens the jobs list pre-filtered.</p></div>
+<div class="catgrid">
+<button class="cat" data-cat="Internship"><img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=900&q=80" onerror="this.onerror=null;this.src='images/cat-study.jpg'" alt="Students studying together" loading="lazy"/><div><small>For school &amp; study</small><h3>Internships →</h3></div></button>
+<button class="cat" data-cat="Full-time"><img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=900&q=80" onerror="this.onerror=null;this.src='images/cat-office.jpg'" alt="Bright modern office" loading="lazy"/><div><small>For the everyday</small><h3>Full-time roles →</h3></div></button>
+<button class="cat" data-cat="Part-time"><img src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?auto=format&fit=crop&w=900&q=80" onerror="this.onerror=null;this.src='images/cat-flex.jpg'" alt="Friendly service work" loading="lazy"/><div><small>For flexible weeks</small><h3>Part-time shifts →</h3></div></button>
+</div>
+<div class="cta"><div><h2>Start with open roles</h2><p class="sub">Browse all 9 featured positions.</p></div><a class="btn primary" href="jobs.html">Browse jobs</a></div>
+</section></main></div>
+
+<footer><div class="wrap foot"><span>Somali Jobs · Find work that fits.</span><span><a href="index.html">Home</a> · <a href="jobs.html">Find jobs</a> · <a href="companies.html">Companies</a></span></div></footer>
+<div class="scrim" id="scrim"></div>
+<aside class="drawer" id="drawer"><div style="display:flex;justify-content:space-between;align-items:center"><h2 style="font-size:17px">Saved (<span id="savedCount2">0</span>)</h2><button class="saveb" id="closeSaved">Close</button></div><div id="savedList" style="display:grid;gap:10px;margin-top:14px"></div></aside>
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-label="Apply"><div class="modalcard"><h2 style="font-size:19px" id="modalTitle">Apply</h2><p class="sub">The hiring team replies by email.</p><form id="applyForm"><input required id="aname" placeholder="Full name"/><input required id="amail" type="email" placeholder="Email address"/><div style="display:flex;gap:8px;margin-top:10px"><button class="apply" type="submit">Send application</button><button class="saveb" type="button" id="closeModal">Cancel</button></div></form></div></div>
+<div class="toast" id="toast"></div>
+<script src="app.js"></script>
+</body></html>

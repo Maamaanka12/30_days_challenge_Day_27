@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Find jobs — Somali Jobs</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css"/></head>
+<body>
+<header class="site"><div class="wrap navrow">
+<a class="brand" href="index.html"><span class="brand-mark">S</span>Somali Jobs</a>
+<nav class="links"><a href="index.html">Home</a><a class="on" href="jobs.html">Find jobs</a><a href="companies.html">Companies</a></nav>
+<div class="navbtns"><button class="savedbtn" id="openSaved">Saved<b id="savedCount">0</b></button><button class="savedbtn burger" id="burger">Menu</button></div>
+</div><div class="wrap" id="mobileNav" style="display:none;padding-bottom:12px"><nav class="links" style="display:flex;flex-wrap:wrap"><a href="index.html">Home</a><a class="on" href="jobs.html">Find jobs</a><a href="companies.html">Companies</a></nav></div></header>
+
+<main class="wrap"><section class="block">
+<div class="sec-head"><h1 style="font-size:26px">Open roles</h1><p class="sub">Nine featured positions. Filter to narrow the list.</p></div>
+<form id="searchForm" style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px">
+<input id="q" type="search" placeholder="Search by role or skill" autocomplete="off" aria-label="Keyword" style="flex:2;min-width:200px;border:1px solid var(--line);border-radius:6px;padding:11px 14px;font:inherit"/>
+<select id="loc" aria-label="Location" style="border:1px solid var(--line);border-radius:6px;padding:11px;font:inherit"><option value="">All locations</option><option>Remote</option><option>Mogadishu</option><option>Hargeisa</option><option>Nairobi</option><option>Hybrid</option></select>
+<select id="typ" aria-label="Type" style="border:1px solid var(--line);border-radius:6px;padding:11px;font:inherit"><option value="">All types</option><option>Full-time</option><option>Part-time</option><option>Internship</option><option>Contract</option></select>
+<button class="btn primary" type="submit">Filter</button>
+</form>
+<div class="toolbar" role="group" aria-label="Filter by type">
+<button class="chip on" data-f="All">All</button><button class="chip" data-f="Full-time">Full-time</button><button class="chip" data-f="Part-time">Part-time</button><button class="chip" data-f="Internship">Internships</button><button class="chip" data-f="Contract">Contract</button>
+<select class="sortsel" id="sort" aria-label="Sort"><option value="new">Newest first</option><option value="pay">Highest pay</option></select>
+<span class="resultline" id="resultLine"></span>
+</div>
+<div class="joblist" id="jobGrid"></div>
+</section></main>
+
+<footer><div class="wrap foot"><span>Somali Jobs · Find work that fits.</span><span><a href="index.html">Home</a> · <a href="jobs.html">Find jobs</a> · <a href="companies.html">Companies</a></span></div></footer>
+<div class="scrim" id="scrim"></div>
+<aside class="drawer" id="drawer"><div style="display:flex;justify-content:space-between;align-items:center"><h2 style="font-size:17px">Saved (<span id="savedCount2">0</span>)</h2><button class="saveb" id="closeSaved">Close</button></div><div id="savedList" style="display:grid;gap:10px;margin-top:14px"></div></aside>
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-label="Apply"><div class="modalcard"><h2 style="font-size:19px" id="modalTitle">Apply</h2><form id="applyForm"><input required id="aname" placeholder="Full name"/><input required id="amail" type="email" placeholder="Email address"/><div style="display:flex;gap:8px;margin-top:10px"><button class="apply" type="submit">Send application</button><button class="saveb" type="button" id="closeModal">Cancel</button></div></form></div></div>
+<div class="toast" id="toast"></div>
+<script src="app.js"></script>
+</body></html>

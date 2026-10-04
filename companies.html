@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Companies — Somali Jobs</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css"/></head>
+<body>
+<header class="site"><div class="wrap navrow">
+<a class="brand" href="index.html"><span class="brand-mark">S</span>Somali Jobs</a>
+<nav class="links"><a href="index.html">Home</a><a href="jobs.html">Find jobs</a><a class="on" href="companies.html">Companies</a></nav>
+<div class="navbtns"><button class="savedbtn" id="openSaved">Saved<b id="savedCount">0</b></button><a class="btn primary" href="jobs.html">Find jobs</a><button class="savedbtn burger" id="burger">Menu</button></div>
+</div><div class="wrap" id="mobileNav" style="display:none;padding-bottom:12px"><nav class="links" style="display:flex;flex-wrap:wrap"><a href="index.html">Home</a><a href="jobs.html">Find jobs</a><a class="on" href="companies.html">Companies</a></nav></div></header>
+
+<main class="wrap"><section class="block">
+<div class="sec-head"><h1 style="font-size:26px">Companies hiring now</h1><p class="sub">Six verified employers. Follow one to get notified of new roles.</p></div>
+<div class="split" style="margin-bottom:20px">
+<figure class="hero-photo" style="margin:0"><img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=1200&q=80" onerror="this.onerror=null;this.src='images/companies-team.jpg'" alt="Team meeting in a modern office" loading="lazy" style="height:280px"/><figcaption>Inside a hiring team</figcaption></figure>
+<div><h2 style="font-size:19px">Good teams hire with care</h2><p class="sub">Verified employers, real replies, pay shown before you apply — across remote, hybrid, and on-site roles.</p><div style="margin-top:14px"><button class="btn" id="followAll">Follow all</button></div></div>
+</div>
+<div class="complist" id="compGrid"></div>
+<div class="cta"><div><h2>See their open roles</h2><p class="sub">All positions in one list.</p></div><a class="btn primary" href="jobs.html">Browse jobs</a></div>
+</section></main>
+
+<footer><div class="wrap foot"><span>Somali Jobs · Find work that fits.</span><span><a href="index.html">Home</a> · <a href="jobs.html">Find jobs</a> · <a href="companies.html">Companies</a></span></div></footer>
+<div class="scrim" id="scrim"></div>
+<aside class="drawer" id="drawer"><div style="display:flex;justify-content:space-between;align-items:center"><h2 style="font-size:17px">Saved (<span id="savedCount2">0</span>)</h2><button class="saveb" id="closeSaved">Close</button></div><div id="savedList" style="display:grid;gap:10px;margin-top:14px"></div></aside>
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-label="Apply"><div class="modalcard"><h2 style="font-size:19px" id="modalTitle">Apply</h2><form id="applyForm"><input required id="aname" placeholder="Full name"/><input required id="amail" type="email" placeholder="Email address"/><div style="display:flex;gap:8px;margin-top:10px"><button class="apply" type="submit">Send application</button><button class="saveb" type="button" id="closeModal">Cancel</button></div></form></div></div>
+<div class="toast" id="toast"></div>
+<script src="app.js"></script>
+</body></html>
